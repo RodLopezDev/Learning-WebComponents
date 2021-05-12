@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Elements - Css custom properties</title>
+    <style>
+        /* 1. Se insertan las custom properties de css en una pseudo-clase root*/
+        my-element {
+            --primary-color: blue;
+        }
+        .segundo {
+            --primary-color: green;
+        }
+        .tercero {
+            --secondary-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <my-element>
+        <span slot="title">Soy texto fuera del componente 1</span>
+        <span slot="parrafo">Soy texto fuera del parrafo</span>
+    </my-element>
+    <my-element class="segundo">
+        <span slot="title">Soy texto fuera del componente 2</span>
+        <span slot="parrafo">Soy texto fuera del parrafo</span>
+    </my-element>
+    <my-element class="tercero">
+        <span slot="title">Soy texto fuera del componente 3</span>
+        <span slot="parrafo">Soy texto fuera del parrafo</span>
+    </my-element>
+    <script type="module" src="my-element.js"></script>
+</body>
+</html>

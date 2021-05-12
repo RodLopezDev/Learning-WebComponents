@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Elements - AttributesChangedCallback</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <my-element>
+        <span slot="title">Soy texto fuera del componente 1</span>
+        <span slot="parrafo">Soy texto fuera del parrafo</span>
+    </my-element>
+    <my-element class="blue">
+        <span slot="title">Soy texto fuera del componente con clase 2</span>
+        <span slot="parrafo">Soy texto fuera del parrafo</span>
+    </my-element>
+    <my-element yellow>
+        <span slot="title">Soy texto fuera del componente con atributo 3</span>
+        <span slot="parrafo">Soy texto fuera del parrafo</span>
+    </my-element>
+    <article class="card">
+        <my-element>
+            <span slot="title">Soy texto fuera del componente con contexto 4</span>
+            <span slot="parrafo">Soy texto fuera del parrafo</span>
+        </my-element>
+    </article>
+    <script type="module" src="my-element.js"></script>
+</body>
+</html>
